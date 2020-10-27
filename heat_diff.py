@@ -11,7 +11,7 @@ def main():
     n = int(1 / dt) + 1  # number of time steps
     alpha = D * dt / dx2  # CFL
 
-    T = np.empty((n, nx))  # Unknown temperature, each row is T at time t
+    T = np.zeros((n, nx))  # Unknown temperature, each row is T at time t
     T[0, 0] = 1  # Initial condition
 
     for i in range(n-1):
